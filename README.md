@@ -4,6 +4,8 @@ App developed using MVC architecture due to project simplicity.
 
 Station details available when cell is clicked.
 
+The app supports iOS 13 and Dark Mode
+
 Distance colors in table view are chosen as it follows:
 
 ```swift
