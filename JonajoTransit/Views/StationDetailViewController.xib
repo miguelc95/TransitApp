@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StationDetailViewController" customModule="JonajoTransit" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLbl" destination="Zvd-Jd-7Ad" id="LO0-na-PdR"/>
+                <outlet property="distanceLbl" destination="EHH-5J-o63" id="3Gv-M1-Muo"/>
+                <outlet property="mapView" destination="aUc-VT-VQu" id="gx2-nf-KnJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-dP-pBL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aUc-VT-VQu">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
+                        </mapView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHO-eP-nw8">
+                            <rect key="frame" x="0.0" y="409" width="414" height="409"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvd-Jd-7Ad">
+                                    <rect key="frame" x="15" y="15" width="319" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHH-5J-o63">
+                                    <rect key="frame" x="349" y="15" width="50" height="20.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="HrW-en-jfW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVW-Tu-W2E">
+                                    <rect key="frame" x="15" y="50.5" width="97" height="30"/>
+                                    <state key="normal" title="Get directions"/>
+                                    <connections>
+                                        <action selector="getDirections:" destination="-1" eventType="touchUpInside" id="qjx-8Q-yIh"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="VVW-Tu-W2E" firstAttribute="top" secondItem="Zvd-Jd-7Ad" secondAttribute="bottom" constant="15" id="0yk-YI-XwL"/>
+                                <constraint firstItem="EHH-5J-o63" firstAttribute="top" secondItem="RHO-eP-nw8" secondAttribute="top" constant="15" id="GUJ-26-jrr"/>
+                                <constraint firstAttribute="trailing" secondItem="EHH-5J-o63" secondAttribute="trailing" constant="15" id="HJc-NU-tja"/>
+                                <constraint firstItem="Zvd-Jd-7Ad" firstAttribute="leading" secondItem="RHO-eP-nw8" secondAttribute="leading" constant="15" id="JM4-9w-8qR"/>
+                                <constraint firstItem="Zvd-Jd-7Ad" firstAttribute="top" secondItem="RHO-eP-nw8" secondAttribute="top" constant="15" id="Jru-Us-xyS"/>
+                                <constraint firstItem="EHH-5J-o63" firstAttribute="leading" secondItem="Zvd-Jd-7Ad" secondAttribute="trailing" constant="15" id="hwK-WS-ko1"/>
+                                <constraint firstItem="VVW-Tu-W2E" firstAttribute="leading" secondItem="RHO-eP-nw8" secondAttribute="leading" constant="15" id="vpF-EU-UZL"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ycs-dP-pBL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2f3-Zp-U00"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ycs-dP-pBL" secondAttribute="trailing" id="7sr-38-qd7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ycs-dP-pBL" secondAttribute="bottom" id="Q1G-8b-8rR"/>
+                <constraint firstItem="Ycs-dP-pBL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lO9-eb-9fQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
