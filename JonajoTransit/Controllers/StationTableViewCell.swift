@@ -14,6 +14,7 @@ class StationTableViewCell: UITableViewCell {
     var station = Attributes() {
         didSet {
             textLabel?.text = station.name
+            textLabel?.textColor = UIColor(named: "text")
             detailTextLabel?.textColor = station.color
             if let stationCoordinate = station.coordinate, station.latitude != nil {
                 let distance = round(Double(LocationManager.shared.coordinate.distance(from: stationCoordinate)))

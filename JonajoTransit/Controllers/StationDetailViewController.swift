@@ -12,6 +12,7 @@ import MapKit
 class StationDetailViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var descriptionView: UIView!
     
     
     @IBOutlet weak var descriptionLbl: UILabel!
@@ -27,6 +28,8 @@ class StationDetailViewController: UIViewController, MKMapViewDelegate {
     }
 
     func setupViews() {
+        descriptionView.backgroundColor = UIColor(named: "Views")
+
         self.navigationController?.navigationBar.tintColor = .white
         self.title = station.name
         descriptionLbl.text = station.description == nil ? "No description" : station.description

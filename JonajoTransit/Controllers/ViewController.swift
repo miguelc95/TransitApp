@@ -54,7 +54,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     fileprivate func setUpView(){
         self.title = "Stations"
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
-        self.navigationController?.navigationBar.prefersLargeTitles = true
+        if #available(iOS 13.0, *) {
+            let bar = self.navigationController?.navigationBar
+            bar?.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+            bar?.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        } else {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+
+        }
         let reloadButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: #selector(getData))
         reloadButton.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItem = reloadButton
