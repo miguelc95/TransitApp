@@ -8,6 +8,8 @@ The app supports iOS 13 and Dark Mode
 
 As the user is moving the app refreshes and updates the view to show nearest stations firts
 
+![](Demo.gif)
+
 Distance colors in table view are chosen as it follows:
 
 ```swift
