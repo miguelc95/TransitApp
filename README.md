@@ -6,7 +6,7 @@ Station details available when cell is clicked.
 
 The app supports iOS 13 and Dark Mode
 
-As the user is moving the app refreshes and updates the view to show nearest stations firts
+As the user is moving the app refreshes and updates the view to show nearest stations first
 
 ![](Demo.gif)
 
